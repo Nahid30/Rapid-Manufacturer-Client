@@ -6,8 +6,8 @@ module.exports = {
   daisyui: {
     themes: [
       {
-        mytheme: {
-          primary: "#a991f7",
+        rapidtheme: {
+          primary: "#ef4444",
           secondary: "#f6d860",
           accent: "#37cdbe",
           neutral: "#3d4451",

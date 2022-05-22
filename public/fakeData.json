@@ -1,0 +1,67 @@
+[
+    {
+      "_id": "62897ac85eec7b3ccf0c17d1",
+      "name": "Ram",
+      "img": "https://images.pexels.com/photos/2588757/pexels-photo-2588757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "6000",
+      "price": "100"
+    },
+    {
+      "_id": "62897ac882cfca30bbc4139f",
+      "name": "Processor",
+      "img": "https://images.pexels.com/photos/1432675/pexels-photo-1432675.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "7000",
+      "price": "120"
+    },
+    {
+      "_id": "62897ac8202acc2c25415dd2",
+      "name": "Cooler Fan",
+      "img": "https://images.pexels.com/photos/3520696/pexels-photo-3520696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "3500",
+      "price": "150"
+    },
+    {
+      "_id": "62897ac8485991d2fe3279d4",
+      "name": "Motherboard",
+      "img": "https://images.pexels.com/photos/4316/technology-computer-chips-gigabyte.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "2000",
+      "price": "200"
+    },
+    {
+      "_id": "62897ac8d30688981c967731",
+      "name": "Hard Disk",
+      "img": "https://images.pexels.com/photos/6429164/pexels-photo-6429164.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "4500",
+      "price": "250"
+    },
+    {
+      "_id": "62897ac86a7b40e7827c91b2",
+      "name": "USB Ports",
+      "img": "https://images.pexels.com/photos/1472443/pexels-photo-1472443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "3000",
+      "price": "300"
+    },
+    {
+      "_id": "62897ac8914b214bc984c04d",
+      "name": "CPU Cooler",
+      "img": "https://images.pexels.com/photos/2225617/pexels-photo-2225617.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "4000",
+      "price": "299"
+    }
+  ]
+
+
