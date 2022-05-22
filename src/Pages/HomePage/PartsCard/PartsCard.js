@@ -14,7 +14,7 @@ const PartsCard = ({ part }) => {
                     <p>Available Quantity: <span className='text-red-600'>{availableQ}</span></p>
                     <p>Description: {description}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-primary text-white">Buy Now</button>
                     </div>
                 </div>
             </div>
