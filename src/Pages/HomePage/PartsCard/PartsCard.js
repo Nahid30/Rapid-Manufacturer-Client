@@ -8,7 +8,7 @@ const PartsCard = ({ part }) => {
             <div className="card w-80 bg-base-100 shadow-xl mx-auto ">
                 <img src={img} alt="" />
                 <div className="card-body">
-                    <h2 className="card-title text-green-600">{name}</h2>
+                    <h2 className="card-title text-2xl text-green-600">{name}</h2>
                     <p>Price: <span className='text-red-600'>${price}</span> </p>
                     <p>Minimum Order: <span className='text-red-600'>{minimumOQ}</span></p>
                     <p>Available Quantity: <span className='text-red-600'>{availableQ}</span></p>
