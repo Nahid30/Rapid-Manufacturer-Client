@@ -1,6 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const PartsCard = ({ part }) => {
+
+    const navigate = useNavigate();
+
+    const handleBuyNow = () =>{
+        navigate('/purchase')
+    }
 
     const { name, img, description, price, minimumOQ, availableQ } = part;
     return (
@@ -14,7 +21,7 @@ const PartsCard = ({ part }) => {
                     <p>Available Quantity: <span className='text-red-600'>{availableQ}</span></p>
                     <p>Description: {description}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary text-white">Buy Now</button>
+                        <button onClick={handleBuyNow} className="btn btn-primary text-white">Buy Now</button>
                     </div>
                 </div>
             </div>
