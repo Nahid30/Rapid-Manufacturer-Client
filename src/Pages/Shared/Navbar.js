@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Navbar = () => {
@@ -16,21 +16,25 @@ const Navbar = () => {
     };
 
     const menuItems = <>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/parts">Parts</Link></li>
-        <li><Link to="/business">Business Summary</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/blogs">Blogs</Link></li>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/parts">All Products</NavLink></li>
+        <li><NavLink to="/blogs">Blogs</NavLink></li>
+
 
         {
-            user && <li><Link to="/purchase">Purchase</Link></li>
+
 
         }
 
         <li>{user ?
-            <button onClick={logout} class="btn btn-outline btn-primary ">Sign Out</button>
+
+            <div>
+                <li><NavLink to="/dashboard">Dashboard</NavLink></li>
+                <button onClick={logout} class="btn btn-outline btn-primary ">Sign Out</button>
+            </div>
+
             :
-            <Link to="/login">Login</Link>}</li>
+            <NavLink to="/login">Login</NavLink>}</li>
 
     </>
 
@@ -41,7 +45,7 @@ const Navbar = () => {
         <div className=''>
             <div className="navbar bg-base-100 bg-slate-100  ">
                 <div className="navbar-start ">
-                    <div  className="dropdown">
+                    <div className="dropdown">
                         <label tabIndex="0" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>

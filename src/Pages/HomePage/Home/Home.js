@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
-import Footer from '../Footer/Footer';
 import Parts from '../Parts/Parts';
+import Review from '../Reviews/Review';
 import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
+
+    const [reviews, setReviews] = useState([])
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews`)
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
+
     return (
         <div>
             <Banner></Banner>
             <Parts></Parts>
             <BusinessSummary></BusinessSummary>
-            <Reviews></Reviews>
-            <Footer></Footer>
+            <div>
+
+                {
+                    reviews.slice(0,6).map(review => <Review
+                        key={review._id}
+                        review={review}
+
+                    ></Review>)
+                }
+            </div>
         </div>
     );
 };

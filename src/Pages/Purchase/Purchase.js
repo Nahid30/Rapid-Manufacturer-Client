@@ -1,11 +1,27 @@
-import React from 'react';
+// import React, { useEffect, useState } from 'react';
 
-const Purchase = () => {
-    return (
-        <div>
-            <h2>This is Purchase page</h2>
-        </div>
-    );
-};
 
-export default Purchase;
+
+// const Purchase = () => {
+
+
+//     const [carts, setCarts] = useState([]);
+
+//     useEffect(() => {
+//         fetch(`http://localhost:5000/items`)
+//             .then(res => res.json())
+//             .then(data => setCarts(data))
+//     }, []);
+
+
+
+//     return (
+//         <div >
+
+//         </div>
+//     );
+// };
+
+// export default Purchase;
+
+

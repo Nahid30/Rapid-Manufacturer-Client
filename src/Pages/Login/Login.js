@@ -100,7 +100,6 @@ const Login = () => {
                                 {errors.password?.type === 'required' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
                                 {errors.password?.type === 'minLength' && <span class="label-text-alt text-red-500">{errors.password.message}</span>}
 
-
                             </label>
                         </div>
 

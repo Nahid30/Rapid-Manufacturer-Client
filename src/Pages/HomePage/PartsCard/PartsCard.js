@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 const PartsCard = ({ part }) => {
 
+    const { _id, name, img, description, price, minimumOQ, availableQ } = part;
+
     const navigate = useNavigate();
 
-    const handleBuyNow = () =>{
-        navigate('/purchase')
+    const navigateToCardDetail = id =>{
+        navigate(`/item/${id}`);
     }
 
-    const { name, img, description, price, minimumOQ, availableQ } = part;
+
     return (
         <div >
             <div className="card w-80 bg-base-100 shadow-xl mx-auto ">
@@ -21,11 +23,11 @@ const PartsCard = ({ part }) => {
                     <p>Available Quantity: <span className='text-red-600'>{availableQ}</span></p>
                     <p>Description: {description}</p>
                     <div className="card-actions justify-end">
-                        <button onClick={handleBuyNow} className="btn btn-primary text-white">Buy Now</button>
+                        <button onClick={ () => navigateToCardDetail (_id) } className="btn btn-primary text-white">Buy Now</button>
                     </div>
                 </div>
             </div>
-
+           
         </div>
     );
 };
