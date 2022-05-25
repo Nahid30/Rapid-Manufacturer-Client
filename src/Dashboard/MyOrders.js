@@ -9,7 +9,12 @@ const MyOrders = () => {
 
     const [user] = useAuthState(auth);
 
-    const { isLoading, data: purchases, refetch } = useQuery('purchases', () => fetch(`http://localhost:5000/purchase/${user.email}`)
+    const { isLoading, data: purchases, refetch } = useQuery('purchases', () => fetch(`http://localhost:5000/purchase/${user.email}`,{
+        method: 'GET',
+        headers:{
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    })
         .then(res => res.json())
     )
 
