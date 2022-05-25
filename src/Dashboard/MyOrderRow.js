@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 const MyOrderRow = ({ purchase, index, refetch }) => {
@@ -33,6 +34,12 @@ const MyOrderRow = ({ purchase, index, refetch }) => {
             <td>{orderQuantity}</td>
             {/* <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td> */}
             <td><button onClick={()=> handleDeleteOrder(_id)} class="btn btn-xs">Remove Order</button></td>
+            <td>
+               
+            {(price && !purchase.paid) &&  <Link to={`/dashboard/payment/${_id}`}> <button className='btn btn-xs btn-success'>Pay</button> </Link>}  
+            {(price && purchase.paid) &&   <span className='text-success'>Paid</span> }  
+            </td>
+
         </tr>
     );
 };

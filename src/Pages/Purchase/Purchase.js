@@ -1,27 +1,27 @@
-// import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 
-// const Purchase = () => {
+const Purchase = () => {
 
 
-//     const [carts, setCarts] = useState([]);
+    const [carts, setCarts] = useState([]);
 
-//     useEffect(() => {
-//         fetch(`http://localhost:5000/items`)
-//             .then(res => res.json())
-//             .then(data => setCarts(data))
-//     }, []);
+    useEffect(() => {
+        fetch(`http://localhost:5000/items`)
+            .then(res => res.json())
+            .then(data => setCarts(data))
+    }, []);
 
 
 
-//     return (
-//         <div >
+    return (
+        <div >
 
-//         </div>
-//     );
-// };
+        </div>
+    );
+};
 
-// export default Purchase;
+export default Purchase;
 
 
