@@ -11,10 +11,9 @@ const Parts = () => {
     }, [])
 
 
-
     return (
         <div>
-            <h2 className='text-center text-4xl font-bold my-6 text-slate-800 '>Parts Items </h2>
+            <h2 className='text-center  font-semibold  text-2xl my-6 text-emerald-500 '>Parts Items </h2>
             <div className='grid  lg:grid-cols-3 sm:grid-cols-1 gap-8 my-10'>
 
                 {
@@ -23,9 +22,8 @@ const Parts = () => {
                         part={part}
                     ></PartsCard>)
                 }
-                  
+
             </div>
-           
         </div>
     );
 };

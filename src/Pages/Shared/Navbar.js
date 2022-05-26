@@ -21,21 +21,19 @@ const Navbar = () => {
         <li><NavLink to="/parts">All Products</NavLink></li>
         <li><NavLink to="/blogs">Blogs</NavLink></li>
 
+        {user ?
 
-        {
-
-
-        }
-
-        <li>{user ?
-
-            <div>
+            <>
                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                 <button onClick={logout} class="btn btn-outline btn-primary ">Sign Out</button>
-            </div>
+            </>
 
             :
-            <NavLink to="/login">Login</NavLink>}</li>
+
+            <>
+                <li><NavLink to="/login">Login</NavLink></li>
+            </>
+        }
 
     </>
 
@@ -44,25 +42,25 @@ const Navbar = () => {
 
     return (
         <div className=''>
-            <div className="navbar bg-base-100 bg-slate-100  ">
+            <div className="navbar bg-base-100 bg-slate-800  ">
                 <div className="navbar-start ">
                     <div className="dropdown">
-                        <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                        <label tabIndex="0" className="btn btn-ghost lg:hidden bg-red-500">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 text-white bg-black  shadow bg-base-100 rounded-box w-52">
                             {menuItems}
                         </ul>
                     </div>
-                    <Link to="/" className="btn btn-ghost normal-case text-xl"> <span className='text-red-500'>Rapid</span> Manufacturer</Link>
+                    <Link to="/" className="btn btn-ghost normal-case text-xl"> <span className='text-red-500'>Rapid</span> <span className='text-white'>Manufacturer</span> </Link>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal p-0">
+                <div className="navbar-center hidden lg:flex  ">
+                    <ul className="menu menu-horizontal p-0 text-white">
                         {menuItems}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden">
+                    <label tabIndex="1" for="dashboard-sidebar" className="btn btn-ghost lg:hidden bg-red-500">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
 
