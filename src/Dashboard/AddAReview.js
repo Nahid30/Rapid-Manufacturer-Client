@@ -36,7 +36,7 @@ const AddAReview = () => {
     }
     return (
         <div className='px-10 '>
-            <h1 className='text-center my-4 text-xl'>Give us your Feedback and Reviews</h1>
+            <h1 className='text-center my-4 text-xl text-emerald-500'>Give us your Feedback and Reviews</h1>
             <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto">
                 <form onSubmit={handleAddReview} class="card-body">
 

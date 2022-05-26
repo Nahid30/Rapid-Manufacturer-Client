@@ -25,7 +25,7 @@ const Navbar = () => {
 
             <>
                 <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-                <button onClick={logout} class="btn btn-outline btn-primary ">Sign Out</button>
+                <button onClick={logout} class="btn btn-outline btn-primary  ">Sign Out</button>
             </>
 
             :

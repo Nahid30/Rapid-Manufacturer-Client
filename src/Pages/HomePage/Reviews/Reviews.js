@@ -12,7 +12,7 @@ const Reviews = () => {
 
     return (
         <div>
-            <h3>This is Reviews {reviews.length} </h3>
+            {/* <h3>This is Reviews {reviews.length} </h3> */}
 
 
                 {

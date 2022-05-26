@@ -31,7 +31,7 @@ const Home = () => {
             <Banner></Banner>
 
             <div>
-                <h2 className='text-center text-2xl font-semibold text-emerald-500 my-6 text-slate-800 '>Parts Items </h2>
+                <h2 className='text-center text-2xl font-semibold text-emerald-500 my-6 '>Parts Items </h2>
                 <div className='grid  lg:grid-cols-3 sm:grid-cols-1 gap-8 my-10'>
                     {
                         newParts.map(part => <PartsCard

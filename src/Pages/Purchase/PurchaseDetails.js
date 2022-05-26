@@ -61,7 +61,7 @@ const PurchaseDetails = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    toast.success('Success');
+                    toast.success('Purchase Successful');
                     event.target.reset();
 
                 })
@@ -98,23 +98,23 @@ const PurchaseDetails = () => {
             <div className='p-6'>
                 <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
                     <form onSubmit={handleBuyNow} class="card-body">
-                        <h1 className='text-2xl'>Name : {user?.displayName}</h1>
-                        <h1 className='text-xl'>Email : {user?.email}</h1>
+                        <h1 className='text-xl text-cyan-500'>Name : {user?.displayName}</h1>
+                        <h1 className='text-xl text-cyan-500'>Email : {user?.email}</h1>
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">Address</span>
+                                <span class="label-text text-emerald-500 text-lg">Address</span>
                             </label>
-                            <input type="text" name='address' placeholder="Type your Address" class="input input-bordered" required />
+                            <textarea type="text" name='address' placeholder="Type your Address" class="input input-bordered" required />
                         </div>
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">Phone Number</span>
+                                <span class="label-text text-emerald-500 text-lg">Phone Number</span>
                             </label>
                             <input type="number" name='phone' placeholder="Type your Phone Number" class="input input-bordered" required />
                         </div>
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">Order Quantity</span>
+                                <span class="label-text text-emerald-500 text-lg">Order Quantity (increase/decrease)</span>
                             </label>
                             <input type="number" name='orderQuantity' placeholder="Quantity" class="input input-bordered" required />
 

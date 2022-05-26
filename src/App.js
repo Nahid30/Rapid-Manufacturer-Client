@@ -21,6 +21,7 @@ import ManageAllOrders from './Dashboard/ManageAllOrders';
 import MakeAdmin from './Dashboard/MakeAdmin';
 import ManageProducts from './Dashboard/ManageProducts';
 import Payment from './Dashboard/Payment';
+import Blogs from './Pages/Blogs/Blogs';
 
 
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="business" element={<BusinessSummary />} />
         <Route path="item/:id" element={<RequireAuth><PurchaseDetails /></RequireAuth>} />
         <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
+        <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>
 
 
