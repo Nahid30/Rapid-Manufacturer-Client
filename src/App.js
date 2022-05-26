@@ -22,6 +22,7 @@ import MakeAdmin from './Dashboard/MakeAdmin';
 import ManageProducts from './Dashboard/ManageProducts';
 import Payment from './Dashboard/Payment';
 import Blogs from './Pages/Blogs/Blogs';
+import NotFound from './Pages/NotFound/NotFound';
 
 
 
@@ -59,6 +60,7 @@ function App() {
 
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
+        <Route path="*" element={<NotFound />} />
 
 
       </Routes>
