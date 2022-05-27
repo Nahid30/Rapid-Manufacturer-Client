@@ -29,20 +29,20 @@ const Payment = () => {
     // }
 
     return (
-        <div>
-            <h2 className='text-purple-500 text-2xl'>Please Pay For: {id}</h2>
+        <div className='px-10'>
+            {/* <h2 className='text-purple-500 text-2xl'>Please Pay For: {id}</h2> */}
 
-            <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12">
+            <div class="card w-50 max-w-md bg-base-100 shadow-xl my-12 mx-auto">
                 <div class="card-body">
-                    <h2>Hello Mr. {user?.displayName}</h2>
+                    <h2>Hello Mr. <span className='text-cyan-500'>{user?.displayName}</span></h2>
 
-                    <h2 class="card-title">Please Pay for {item.name}</h2>
+                    <h2 class="card-title">Please Pay for <span className='text-cyan-500'>{item.name}</span> </h2>
 
-                    <p>Please Pay: ${item.price} </p>
+                    <p>Please Pay: <span className='text-rose-600'>${item.price}</span> </p>
 
                 </div>
             </div>
-            <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100">
+            <div class="card flex-shrink-0 w-50 max-w-md shadow-2xl bg-base-100 mx-auto">
                 <div class="card-body">
 
                     <Elements stripe={stripePromise}>

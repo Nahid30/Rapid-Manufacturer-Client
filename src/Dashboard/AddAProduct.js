@@ -94,7 +94,6 @@ const AddAProduct = () => {
                         </label>
                     </div>
 
-                    {/* email  */}
                     <div class="form-control w-full max-w-xs">
                         <label class="label">
                             <span class="label-text text-black font-bold">Price</span>
@@ -118,7 +117,7 @@ const AddAProduct = () => {
                         </label>
                     </div>
 
-                    {/* password start */}
+                    
 
                     <div class="form-control w-full max-w-xs">
                         <label class="label">

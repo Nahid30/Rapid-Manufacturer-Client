@@ -25,8 +25,8 @@ const Review = ({ review }) => {
                         <img src={img} alt="" />
                     </div>
                 </div>
-                <h2>Name: {user?.displayName}</h2>
-                <h2>Feedback: <span className='text-blue-500'> {comments}</span></h2>
+                <h2>Name: <span className='text-cyan-500'>{user?.displayName}</span> </h2>
+                <h2>Feedback: <span className='text-cyan-500'> {comments}</span></h2>
                 <Rating
                     initialRating={ratings}
                     emptySymbol={
