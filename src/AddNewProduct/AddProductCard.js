@@ -1,20 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PartsCard = ({ part }) => {
-
-    const { _id, name, img, description, price, minimumOQ, availableQ } = part;
-
+const AddProductCard = ({addProduct}) => {
     const navigate = useNavigate();
 
 
     const navigateToCardDetail = id =>{
         navigate(`/item/${id}`);
     }
-
-
+    const { _id, name, img, description, price, minimumOQ, availableQ } = addProduct;
     return (
-        <div >
+        <div>
+            
             <div className="card w-80 bg-base-100 shadow-xl mx-auto ">
                 <img src={img} alt="" />
                 <div className="card-body  ">
@@ -28,9 +25,8 @@ const PartsCard = ({ part }) => {
                     </div>
                 </div>
             </div>
-           
         </div>
     );
 };
 
-export default PartsCard;
+export default AddProductCard;

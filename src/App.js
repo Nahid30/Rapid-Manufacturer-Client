@@ -23,6 +23,8 @@ import ManageProducts from './Dashboard/ManageProducts';
 import Payment from './Dashboard/Payment';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import Reviews from './Pages/HomePage/Reviews/Reviews';
+import AddNewProduct from './AddNewProduct/AddNewProduct';
 
 
 
@@ -38,6 +40,8 @@ function App() {
         <Route path="item/:id" element={<RequireAuth><PurchaseDetails /></RequireAuth>} />
         <Route path="purchase" element={<RequireAuth><Purchase /></RequireAuth>} />
         <Route path='blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='reviews' element={<Reviews></Reviews>}></Route>
+        <Route path='product' element={<AddNewProduct></AddNewProduct>}></Route>
         <Route path='dashboard' element={<Dashboard></Dashboard>}></Route>
 
 

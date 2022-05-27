@@ -10,6 +10,8 @@ const Parts = () => {
             .then(data => setParts(data))
     }, [])
 
+  
+
 
     return (
         <div>
@@ -22,6 +24,8 @@ const Parts = () => {
                         part={part}
                     ></PartsCard>)
                 }
+
+               
 
             </div>
         </div>

@@ -46,16 +46,21 @@ const Home = () => {
             {/* <Parts></Parts> */}
 
             <BusinessSummary></BusinessSummary>
-            <div className='grid  lg:grid-cols-3 sm:grid-cols-1 gap-8 my-10'>
 
-                {
-                    reviews.slice(0, 6).map(review => <Review
-                        key={review._id}
-                        review={review}
+            <div>
+                <h3 className='text-center text-2xl font-semibold text-emerald-500 my-6 '>Our Client Reviews</h3>
+                <div className='grid  lg:grid-cols-3 sm:grid-cols-1 gap-8 my-10'>
 
-                    ></Review>)
-                }
+                    {
+                        reviews.slice(0, 3).map(review => <Review
+                            key={review._id}
+                            review={review}
+
+                        ></Review>)
+                    }
+                </div>
             </div>
+
         </div>
     );
 };

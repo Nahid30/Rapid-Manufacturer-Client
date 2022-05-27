@@ -18,7 +18,6 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h1>All Users: {users.length}</h1>
 
             <div class="overflow-x-auto">
                 <table class="table w-full">
@@ -26,6 +25,7 @@ const MakeAdmin = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
+                            <th>Email</th>
                             <th>Job</th>
                             <th>Favorite Color</th>
                         </tr>
@@ -33,9 +33,10 @@ const MakeAdmin = () => {
                     <tbody>
                        
                        {
-                           users.map(user => <AdminRow
+                           users.map((user,index) => <AdminRow
                            key={user._id}
                            user={user}
+                           index={index}
                            refetch={refetch}
                            ></AdminRow>)
                        }

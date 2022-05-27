@@ -11,9 +11,7 @@ const Reviews = () => {
     }, [])
 
     return (
-        <div>
-            {/* <h3>This is Reviews {reviews.length} </h3> */}
-
+        <div className='grid  lg:grid-cols-3 sm:grid-cols-1 gap-8 my-10'>
 
                 {
                     reviews.map(review => <Review
@@ -22,7 +20,6 @@ const Reviews = () => {
 
                     ></Review>)
                 }
-
 
 
         </div>
