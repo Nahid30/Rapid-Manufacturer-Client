@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import DeleteConfirm from './DeleteConfirm';
 import ManageProductRow from './ManageProductRow';
 
 const ManageProducts = () => {
-
+    const [deleteModal,setDeleteModal] = useState(null);
     const [manageProducts, setManageProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/items')
@@ -34,11 +35,18 @@ const ManageProducts = () => {
                                 key={manageProduct._id}
                                 manageProduct={manageProduct}
                                 index={index}
+                                setDeleteModal={setDeleteModal}
                             ></ManageProductRow>)
                         }
                     </tbody>
                 </table>
             </div>
+            {
+                deleteModal && <DeleteConfirm
+                deleteModal={deleteModal}
+                setDeleteModal={setDeleteModal}
+                ></DeleteConfirm>
+            }
         </div>
     );
 };

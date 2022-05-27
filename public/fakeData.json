@@ -61,6 +61,15 @@
       "minimumOQ": "100",
       "availableQ": "4000",
       "price": "299"
+    },
+    {
+      "_id": "62897ac8914b214bc984c04d",
+      "name": "Motherboard Parts",
+      "img": "https://images.pexels.com/photos/159201/circuit-circuit-board-resistor-computer-159201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "description": "This is a powerful and faster product.",
+      "minimumOQ": "100",
+      "availableQ": "4000",
+      "price": "199"
     }
   ]
 
