@@ -6,18 +6,18 @@ const ManageProducts = () => {
     const [deleteModal,setDeleteModal] = useState(null);
     const [manageProducts, setManageProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://rapid-manufacturer.herokuapp.com/items')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 setManageProducts(data)
             })
-    }, [])
+    }, [deleteModal])
     return (
         <div>
             <h2 className='text-center text-lg text-emerald-500	my-6 '>Manage All Products</h2>
-            <div class="overflow-x-auto px-10 my-10">
-                <table class="table w-full">
+            <div className="overflow-x-auto px-10 my-10">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>

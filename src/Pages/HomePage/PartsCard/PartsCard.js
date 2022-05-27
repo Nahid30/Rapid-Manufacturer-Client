@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const PartsCard = ({ part }) => {
 
     const { _id, name, img, description, price, minimumOQ, availableQ } = part;
+    console.log(part)
 
     const navigate = useNavigate();
 

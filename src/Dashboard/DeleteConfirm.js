@@ -10,7 +10,7 @@ const DeleteConfirm = ({ deleteModal, setDeleteModal }) => {
 
     const handleDelete = (id) => {
         // console.log('delete id', id)
-        fetch(`http://localhost:5000/item/${id}`, {
+        fetch(`https://rapid-manufacturer.herokuapp.com/item/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json',
@@ -32,15 +32,15 @@ const DeleteConfirm = ({ deleteModal, setDeleteModal }) => {
         <div>
 
 
-            <input type="checkbox" id="delete-confirm-modal" class="modal-toggle" />
-            <div class="modal">
-                <div class="modal-box">
-                    <label for="delete-confirm-modal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
-                    <h3 class="font-bold text-lg text-red-600">Are you sure, you want to Delete {name}? </h3>
-                    <p class="py-4">Please Check before Delete!</p>
-                    <div class="modal-action">
-                        <button onClick={ ()=> handleDelete(_id) } class="btn btn-sm btn-error btn-primary">Delete</button>
-                        <label for="delete-confirm-modal" class="btn btn-sm">Cancel</label>
+            <input type="checkbox" id="delete-confirm-modal" className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box">
+                    <label for="delete-confirm-modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <h3 className="font-bold text-lg text-red-600">Are you sure, you want to Delete {name}? </h3>
+                    <p className="py-4">Please Check before Delete!</p>
+                    <div className="modal-action">
+                        <button onClick={ ()=> handleDelete(_id) } className="btn btn-sm btn-error btn-primary">Delete</button>
+                        <label for="delete-confirm-modal" className="btn btn-sm">Cancel</label>
                     </div>
                 </div>
             </div>

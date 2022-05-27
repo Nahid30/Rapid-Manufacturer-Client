@@ -1,9 +1,102 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const MyProfile = () => {
+
+    const [user] = useAuthState(auth);
+    const [update, setUpdate] = useState(null);
+    const [profile, setProfile] = useState();
+    useEffect(() => {
+        fetch(`https://rapid-manufacturer.herokuapp.com/user/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setProfile(data)
+
+
+            })
+    }, [user, update])
+
+    const handleUpdateProfile = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const phone = event.target.phone.value;
+        const education = event.target.education.value;
+        const linkedIn = event.target.linkedIn.value;
+
+        const userData = { name, email: user?.email, phone, education, linkedIn }
+        console.log(userData);
+
+        fetch(`https://rapid-manufacturer.herokuapp.com/updateUser/${user?.email}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        })
+            .then(res => res.json())
+            .then(data => {
+               console.log(data);
+               setUpdate(data);
+
+            })
+    }
+
     return (
         <div>
             <h2>This is My profile</h2>
+
+            <p>Name:{profile?.name}</p>
+            <p>Email: {profile?.email}</p>
+            <p>Phone: {profile?.phone}</p>
+            <p>Education: {profile?.education}</p>
+            <p>LinkedIn: {profile?.linkedIn}</p>
+
+
+
+            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <form onSubmit={handleUpdateProfile} class="card-body">
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Name</span>
+                        </label>
+                        <input type="text" name="name" required defaultValue={profile?.name} placeholder="Name" class="input input-bordered" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Email</span>
+                        </label>
+                        <input type="email" name="email" disabled defaultValue={profile?.email} placeholder="Email" class="input input-bordered" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Phone</span>
+                        </label>
+                        <input type="number" name="phone" required defaultValue={profile?.phone} placeholder="Phone" class="input input-bordered" />
+                    </div>
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">Education</span>
+                        </label>
+                        <input type="text" name="education" required defaultValue={profile?.education} placeholder="Education" class="input input-bordered" />
+                    </div>
+
+                    <div class="form-control">
+                        <label class="label">
+                            <span class="label-text">LinkedIn</span>
+                        </label>
+                        <input type="text" placeholder="LinkedIn" required defaultValue={profile?.linkedIn} name="linkedIn" class="input input-bordered" />
+
+                    </div>
+
+                    <div class="form-control mt-6">
+                        <button type='submit' class="btn btn-primary">Update</button>
+                    </div>
+                </form>
+            </div>
+
+
         </div>
     );
 };

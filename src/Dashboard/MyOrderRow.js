@@ -8,7 +8,7 @@ const MyOrderRow = ({ purchase, index, refetch }) => {
     const handleDeleteOrder = (id) => {
         console.log('Order Removed')
 
-        fetch(`http://localhost:5000/purchase/${id}`, {
+        fetch(`https://rapid-manufacturer.herokuapp.com/purchase/${id}`, {
             method: 'DELETE'
 
         })
@@ -25,15 +25,15 @@ const MyOrderRow = ({ purchase, index, refetch }) => {
         <tr>
             <th> {index + 1} </th>
             <td>{productName}</td>
-            <td>  <div class="avatar">
-                <div class="w-20 rounded">
+            <td>  <div className="avatar">
+                <div className="w-20 rounded">
                     <img src={purchase.img} alt="" />
                 </div>
             </div> </td>
             <td>${price}</td>
             <td>{orderQuantity}</td>
-            {/* <td>{role !== 'admin' && <button onClick={makeAdmin} class="btn btn-xs">Make Admin</button>}</td> */}
-            <td><button onClick={() => handleDeleteOrder(_id)} class="btn btn-xs">Remove Order</button></td>
+            {/* <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td> */} 
+            <td><button onClick={() => handleDeleteOrder(_id)} className="btn btn-xs">Remove Order</button></td>
             <td>
 
                 {(price && !purchase.paid) && <Link to={`/dashboard/payment/${_id}`}> <button className='btn btn-xs btn-success'>Pay</button> </Link>}

@@ -18,7 +18,7 @@ const AddAReview = () => {
         const review = {ratings, comments,name, email, img}
 
 
-        fetch(`http://localhost:5000/review`,{
+        fetch(`https://rapid-manufacturer.herokuapp.com/review`,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -37,14 +37,14 @@ const AddAReview = () => {
     return (
         <div className='px-10 '>
             <h1 className='text-center my-4 text-xl text-emerald-500'>Give us your Feedback and Reviews</h1>
-            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto">
-                <form onSubmit={handleAddReview} class="card-body">
+            <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mx-auto">
+                <form onSubmit={handleAddReview} className="card-body">
 
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Review Star</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Review Star</span>
                         </label>
-                        <select required name='ratings' class="input-bordered select w-full max-w-xs">
+                        <select required name='ratings' className="input-bordered select w-full max-w-xs">
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
@@ -54,16 +54,16 @@ const AddAReview = () => {
                         </select>
                        
                     </div>
-                    <div class="form-control">
-                        <label class="label">
-                            <span class="label-text">Comments:</span>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Comments:</span>
                         </label>
-                        <textarea  class="textarea input-bordered" name='comments' placeholder="Type your Review Comments" required></textarea>
+                        <textarea  className="textarea input-bordered" name='comments' placeholder="Type your Review Comments" required></textarea>
 
                     </div>
 
-                    <div class="form-control mt-6">
-                        <button type='submit' class="btn btn-primary">Review</button>
+                    <div className="form-control mt-6">
+                        <button type='submit' className="btn btn-primary">Review</button>
                     </div>
 
 

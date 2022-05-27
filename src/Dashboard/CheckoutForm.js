@@ -9,9 +9,10 @@ const CheckoutForm = ({ item }) => {
     const [processing, setProcessing] = useState(false);
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
+    // const [loading, setLoading] = useState(false);
     const { price, name, email, _id } = item;
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://rapid-manufacturer.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -78,7 +79,7 @@ const CheckoutForm = ({ item }) => {
                 payItem: _id,
                 transactionId: paymentIntent.id
             }
-            fetch(`http://localhost:5000/item/${_id}`, {
+            fetch(`https://rapid-manufacturer.herokuapp.com/payment/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -89,6 +90,7 @@ const CheckoutForm = ({ item }) => {
                 .then(data => {
                     setProcessing(false);
                     console.log(data)
+                    
                 })
 
         }
@@ -119,6 +121,9 @@ const CheckoutForm = ({ item }) => {
             </form>
             {
                 cardError && <p className='text-red-500'>{cardError}</p>
+            }
+            {
+                processing && <button className="btn loading my-5">loading</button>
             }
             {
                 success && <div className='text-green-500'>

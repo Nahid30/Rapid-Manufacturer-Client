@@ -5,7 +5,7 @@ import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
 
-    const { data: users, isLoading ,refetch} = useQuery('users', () => fetch('http://localhost:5000/user',{
+    const { data: users, isLoading ,refetch} = useQuery('users', () => fetch('https://rapid-manufacturer.herokuapp.com/user',{
         method:'GET',
         headers:{
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -19,15 +19,15 @@ const MakeAdmin = () => {
     return (
         <div>
 
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Name</th>
                             <th>Email</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Make Admin</th>
+                            <th>Remove Admin</th>
+                            
                         </tr>
                     </thead>
                     <tbody>

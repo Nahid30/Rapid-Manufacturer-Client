@@ -11,16 +11,16 @@ const Dashboard = () => {
 
     return (
         <div>
-            <div class="drawer drawer-mobile bg-slate-100">
-                <input id="dashboard-sidebar" type="checkbox" class="drawer-toggle" />
-                <div class="drawer-content">
+            <div className="drawer drawer-mobile bg-slate-100">
+                <input id="dashboard-sidebar" type="checkbox" className="drawer-toggle" />
+                <div className="drawer-content">
                     <h2 className='text-center mt-10'> <span className='text-2xl text-rose-600 my-8'>Welcome to your Dashboard:</span> <span className='text-cyan-500 text-2xl'>{user?.displayName}</span></h2>
                     <Outlet></Outlet>
 
                 </div>
-                <div class="drawer-side rounded">
-                    <label for="dashboard-sidebar" class="drawer-overlay"></label>
-                    <ul class="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
+                <div className="drawer-side rounded">
+                    <label for="dashboard-sidebar" className="drawer-overlay"></label>
+                    <ul className="menu p-4 overflow-y-auto w-60 bg-base-100 text-base-content">
                         <li><Link to="/dashboard/myProfile">My Profile</Link></li>
 
                         {

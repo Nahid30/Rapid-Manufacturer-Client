@@ -14,14 +14,14 @@ const Home = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://rapid-manufacturer.herokuapp.com/items')
             .then(res => res.json())
             .then(data => setParts(data))
     }, [])
 
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://rapid-manufacturer.herokuapp.com/reviews`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])

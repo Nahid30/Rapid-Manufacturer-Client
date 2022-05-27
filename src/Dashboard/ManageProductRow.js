@@ -15,8 +15,8 @@ const ManageProductRow = ({ manageProduct, index , setDeleteModal}) => {
         <tr>
             <th>{index + 1}</th>
             <td>{name}</td>
-            <td> <div class="avatar">
-                <div class="w-20 rounded">
+            <td> <div className="avatar">
+                <div className="w-20 rounded">
                     <img src={img} alt="" />
                 </div> </div>
             </td>
@@ -24,7 +24,7 @@ const ManageProductRow = ({ manageProduct, index , setDeleteModal}) => {
             <td>{minimumOQ}</td>
             <td>{availableQ}</td>
             <td>
-                <label onClick={() => setDeleteModal(manageProduct)} for="delete-confirm-modal" class="btn btn-square btn-primary">X</label>
+                <label onClick={() => setDeleteModal(manageProduct)} for="delete-confirm-modal" className="btn btn-square btn-primary">X</label>
 
             </td>
         </tr>

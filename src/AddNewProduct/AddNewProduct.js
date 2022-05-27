@@ -4,7 +4,7 @@ import AddProductCard from './AddProductCard';
 const AddNewProduct = () => {
     const [addProducts, setAddProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://rapid-manufacturer.herokuapp.com/product')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
