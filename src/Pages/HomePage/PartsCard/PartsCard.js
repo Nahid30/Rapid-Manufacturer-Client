@@ -13,17 +13,18 @@ const PartsCard = ({ part }) => {
         navigate(`/item/${id}`);
     }
 
+   
 
     return (
         <div >
             <div className="card w-80 bg-base-100 shadow-xl mx-auto ">
                 <img src={img} alt="" />
-                <div className="card-body  ">
-                    <h2 className="card-title text-2xl text-green-600">{name}</h2>
-                    <p>Price: <span className='text-red-600'>${price}</span> </p>
-                    <p>Minimum Order: <span className='text-red-600'>{minimumOQ}</span></p>
-                    <p>Available Quantity: <span className='text-red-600'>{availableQ}</span></p>
-                    <p>Description: {description}</p>
+                <div className="card-body">
+                    <h2 className="card-title text-xl text-emerald-500">{name}</h2>
+                    <p> <span className='text-gray-500'>Price:</span>  <span className='text-red-600'>${price}</span> </p>
+                    <p> <span className='text-gray-500'> Minimum Order:</span> <span className='text-red-600'>{minimumOQ}</span></p>
+                    <p> <span className='text-gray-500'> Available Quantity:</span> <span className='text-red-600'>{availableQ}</span></p>
+                    <p> <span className='text-gray-500'> Description:</span> {description}</p>
                     <div className="card-actions justify-end">
                         <button onClick={ () => navigateToCardDetail (_id) } className="btn btn-primary text-white">Buy Now</button>
                     </div>

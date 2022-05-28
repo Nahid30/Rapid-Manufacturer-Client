@@ -36,25 +36,28 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-               console.log(data);
-               setUpdate(data);
+                console.log(data);
+                setUpdate(data);
 
             })
     }
 
     return (
         <div>
-            <h2>This is My profile</h2>
-
-            <p>Name:{profile?.name}</p>
-            <p>Email: {profile?.email}</p>
-            <p>Phone: {profile?.phone}</p>
-            <p>Education: {profile?.education}</p>
-            <p>LinkedIn: {profile?.linkedIn}</p>
+            <h2 className='text-center my-6 text-emerald-500 font-semibold text-lg'> My profile</h2>
 
 
+            <div className='text-center mb-10'>
+                <p>Name:{profile?.name}</p>
+                <p>Email: {profile?.email}</p>
+                <p>Phone: {profile?.phone}</p>
+                <p>Education: {profile?.education}</p>
+                <p>LinkedIn: {profile?.linkedIn}</p>
+            </div>
 
-            <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+
+
+            <div class="card flex-shrink-0 w-full mx-auto max-w-sm shadow-2xl bg-base-100 my-10">
                 <form onSubmit={handleUpdateProfile} class="card-body">
 
                     <div class="form-control">

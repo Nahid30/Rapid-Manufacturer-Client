@@ -1,16 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+
+
 
 const ManageProductRow = ({ manageProduct, index , setDeleteModal}) => {
 
-    // const [itemId] = useParams();
     const { _id, name, img, minimumOQ, price, availableQ } = manageProduct;
 
    
-
     return (
-
 
         <tr>
             <th>{index + 1}</th>

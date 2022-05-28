@@ -53,17 +53,17 @@ const ManageAllProductRow = ({ item, refetch, index }) => {
             <td>{productName}</td>
             <td>{price}</td>
             <td>{orderQuantity}</td>
-            <td> {item.paid ? <p>Paid</p> : <p>Unpaid</p>} </td>
+            <td> {item.paid ? <p>Paid</p> : <button className='btn btn-sm btn-info text-white'>Unpaid</button> } </td>
             <td>
                 {
-                    (item.paid && item.shipped) && <p>Shipped</p>
+                    (item.paid && item.shipped) && <p className='text-lg text-green-500 font-semibold'>Shipped</p>
                 }
                 {
-                    (item.paid && !item.shipped) && <button onClick={() => handlePending(_id)} className='btn  btn-xs btn-warning'>Pending</button>
+                    (item.paid && !item.shipped) && <button onClick={() => handlePending(_id)} className='btn  btn-sm btn-warning'>Pending</button>
                 }
 
                 {
-                    !item.paid && <button onClick={() => handleDeleteProduct(_id)} className="btn btn-xs btn-primary">Cancel</button>
+                    !item.paid && <button onClick={() => handleDeleteProduct(_id)} className="btn btn-sm btn-primary">Cancel</button>
                 }
             </td>
         </tr>

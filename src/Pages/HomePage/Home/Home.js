@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Banner from '../Banner/Banner';
 import BusinessSummary from '../BusinessSummary/BusinessSummary';
-import Parts from '../Parts/Parts';
 import PartsCard from '../PartsCard/PartsCard';
+import ProductionSummary from '../ProductionSummary/ProductionSummary';
 import Review from '../Reviews/Review';
-import Reviews from '../Reviews/Reviews';
+import Video from '../Video/Video';
 
 const Home = () => {
 
@@ -39,13 +39,15 @@ const Home = () => {
                             part={part}
                         ></PartsCard>)
                     }
-                    <button onClick={() => navigate('/parts')} className='btn btn-warning mx-auto'>See all Items</button>
+                    <button onClick={() => navigate('/parts')} className='btn btn-sm btn-info mx-auto text-white'>See all Items</button>
                 </div>
             </div>
 
-            {/* <Parts></Parts> */}
+         
 
             <BusinessSummary></BusinessSummary>
+        
+
 
             <div>
                 <h3 className='text-center text-2xl font-semibold text-emerald-500 my-6 '>Our Client Reviews</h3>
@@ -60,6 +62,9 @@ const Home = () => {
                     }
                 </div>
             </div>
+
+            <ProductionSummary></ProductionSummary>
+            <Video></Video>
 
         </div>
     );

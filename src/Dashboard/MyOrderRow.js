@@ -32,14 +32,14 @@ const MyOrderRow = ({ purchase, index, refetch }) => {
             </div> </td>
             <td>${price}</td>
             <td>{orderQuantity}</td>
-            {/* <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}</td> */} 
-            <td><button onClick={() => handleDeleteOrder(_id)} className="btn btn-xs">Remove Order</button></td>
+           
+            <td><button onClick={() => handleDeleteOrder(_id)} className="btn btn-primary btn-xs">Remove Order</button></td>
             <td>
 
-                {(price && !purchase.paid) && <Link to={`/dashboard/payment/${_id}`}> <button className='btn btn-xs btn-success'>Pay</button> </Link>}
+                {(price && !purchase.paid) && <Link to={`/dashboard/payment/${_id}`}> <button className='btn btn-sm btn-warning text-white'>Pay</button> </Link>}
 
                 {(price && purchase.paid) && <div>
-                    <span className='text-blue-500'>Paid</span>
+                    <button className='btn btn-sm text-white btn-success'>Paid</button>
                 </div> }
             </td>
 

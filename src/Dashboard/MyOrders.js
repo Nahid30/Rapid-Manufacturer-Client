@@ -22,8 +22,6 @@ const MyOrders = () => {
         return <Loading></Loading>
     }
 
-    // const { _id, name, img, description, price, minimumOQ, availableQ } = cart;
-
     return (
         <div className='px-10'>
             <h2 className='my-4 text-xl text-green-500'>My Orders:</h2>
