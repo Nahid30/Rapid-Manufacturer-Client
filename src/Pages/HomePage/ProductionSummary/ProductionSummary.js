@@ -9,13 +9,13 @@ const ProductionSummary = () => {
                 </div>
 
                 <div className='flex justify-center my-10'>
-                    <div>
-                        <p> <span className='text-gray-600'>Hard Disk:</span> <progress class="progress progress-accent  w-56" value="40" max="100"></progress></p><br />
+                    <div className='text-right'>
+                        <p> <span className='text-gray-600'>Hard Disk:</span> <progress class="progress progress-accent  w-56" value="60" max="100"></progress></p><br />
 
                         <p> <span className='text-gray-600'>Processor:</span> <progress class="progress progress-accent  w-56" value="50" max="100"></progress> </p><br />
                         <p> <span className='text-gray-600'>USB Ports: </span><progress class="progress progress-accent  w-56" value="60" max="100"></progress></p> <br />
-                        <p> <span className='text-gray-600'>Cooler Fan:</span> <progress class="progress progress-accent  w-56" value="70" max="100"></progress></p> <br />
-                        <p> <span className='text-gray-600'>CPU Cooler:</span><progress class="progress progress-accent  w-56" value="90" max="100"></progress></p>
+                        <p> <span className='text-gray-600'>Cooler Fan: </span> <progress class="progress progress-accent  w-56" value="70" max="100"></progress></p> <br />
+                        <p> <span className='text-gray-600'>CPU Cooler: </span><progress class="progress progress-accent  w-56" value="90" max="100"></progress></p>
                     </div>
                 </div>
 
