@@ -14,8 +14,8 @@ const ManageAllOrders = () => {
     }
 
     return (
-        <div>
-            <h2>Manage All orders</h2>
+        <div className='px-10 my-10'>
+            {/* <h2>Manage All orders</h2> */}
 
             <div className="overflow-x-auto">
                 <table className="table w-full">
